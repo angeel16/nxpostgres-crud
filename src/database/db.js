@@ -10,6 +10,11 @@ async function crearTabla() {
             precio DECIMAL(10,2),
             createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
+        CREATE TABLE IF NOT EXISTS proveedores (
+            id SERIAL PRIMARY KEY,
+            nombre TEXT NOT NULL,
+            precio VARCHAR(9)
+        );
         `;
         console.log(result);
     } catch (error) {
